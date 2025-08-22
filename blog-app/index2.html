@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #575757;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .post {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .post h2 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    .sidebar {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Simple Blog</h1>
+    <p>Sharing thoughts & ideas</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Posts</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <main>
+      <article class="post">
+        <h2>First Blog Post</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec eros at arcu cursus luctus.</p>
+      </article>
+      <article class="post">
+        <h2>Another Blog Post</h2>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </article>
+    </main>
+
+    <aside class="sidebar">
+      <h3>About Me</h3>
+      <p>Hi, I'm a blogger passionate about sharing ideas and learning new things!</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Blog | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
