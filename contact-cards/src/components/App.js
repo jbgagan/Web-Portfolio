@@ -1,11 +1,21 @@
 import contacts from "./contacts"
 import Cards from "./Cards"
+function createCard(contact){
+  return <Cards 
+    key={contact.id}
+    name={contact.name}
+    img={contact.imgSrc}
+    ph={contact.phone}
+    email={contact.email}
+  />
+}
 
 function App() {
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
-      <Cards
+      {contacts.map(createCard)}
+      {/* <Cards
       name={contacts[0].name}
       img={contacts[0].imgSrc}
       ph={contacts[0].phone}
@@ -22,7 +32,7 @@ function App() {
       img={contacts[2].imgSrc}
       ph={contacts[2].phone}
       email={contacts[2].email}
-       />
+       />  */}
     </div>
   );
 }
